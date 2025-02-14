@@ -84,11 +84,12 @@ forecast_future = model.make_future_dataframe(periods=future_periods_future, fre
 forecast_future = model.predict(forecast_future)
 future_forecast = forecast_future[forecast_future['ds'] > latest_timestamp]
 
+history_id = '1LA3oYE4Kyw5bz6OYI59E4xOh_C_ROb1H'
+history_url = f"https://drive.google.com/uc?id={history_id}"
+
 with st.expander("미래 예측 결과 (CSV 최신 데이터 이후 15일)", expanded=True):
-    st.dataframe(
-        future_forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']],
-        use_container_width=True
-    )
+    history=pd.read_csv(history_url)
+    st.dataframe(history)
 
 # 7) 매매 시그널 생성 (미래 데이터 기준)
 st.markdown("---")
