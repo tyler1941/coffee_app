@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from prophet.plot import plot_plotly
+from fbprophet.plot import plot_plotly
 import plotly.graph_objects as go
 
 import coffee_model  # 백엔드 로직이 담긴 coffee_model 임포트
