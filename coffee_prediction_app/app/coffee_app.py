@@ -95,7 +95,7 @@ st.markdown("---")
 st.subheader("미래 매매 시그널")
 st.write(
     "최신 실제 데이터 이후의 15일치 예측값을 기준으로, "
-    "임계치(%) 이상 상승 시 **Buy**, 하락 시 **Sell**, 그 외는 **Hold** 신호를 생성합니다."
+    "임계치(%) 이상 상승 시 **Buy**, 하락 시 **Hell**, 그 외는 **Hold** 신호를 생성합니다."
 )
 
 threshold = st.number_input(
